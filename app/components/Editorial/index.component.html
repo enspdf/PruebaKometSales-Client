@@ -1,0 +1,23 @@
+<div *ngIf="editorials">
+    <hr>
+    <a routerLink="/editorial/new" class="btn btn-primary">Nueva Editorial</a>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id Editorial</th>
+                <th>Nombre</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let editorial of editorials">
+            <tr>
+                <th>{{ editorial.id }}</th>
+                <th>{{ editorial.editorial_name }}</th>              
+                <th><a routerLink="/editorial/edit/{{ editorial.id }}" class="btn btn-info">Actualizar</a></th>
+                <th><a routerLink="/editorial/delete/{{ editorial.id }}" class="btn btn-danger">Eliminar</a></th>
+            </tr>
+        </tbody>
+    </table>
+</div>

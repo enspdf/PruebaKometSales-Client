@@ -1,0 +1,25 @@
+<div *ngIf="bahias">
+    <hr>
+    <a routerLink="/bahias/new" class="btn btn-primary">Nueva bahia</a>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id Bahia</th>
+                <th>Parqueadero</th>
+                <th>Disponible</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let bahia of bahias">
+            <tr>
+                <th>{{ bahia.IdBahia }}</th>
+                <th>{{ bahia.Parqueadero.nombre }}</th>
+                <th>{{ bahia.Disponible }}</th>
+                <th><a routerLink="/bahias/edit/{{ bahia.IdBahia }}" class="btn btn-info">Actualizar</a></th>
+                <th><a routerLink="/bahias/delete/{{ bahia.IdBahia }}" class="btn btn-danger">Eliminar</a></th>
+            </tr>
+        </tbody>
+    </table>
+</div>

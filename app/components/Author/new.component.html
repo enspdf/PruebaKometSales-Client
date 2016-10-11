@@ -1,0 +1,15 @@
+    <div class="container">
+        <h1>Nuevo Autor</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input type="text" name="first_name" [(ngModel)]="first_name" placeholder="Nombres" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="initials" [(ngModel)]="initials" placeholder="Iniciales" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="last_name" [(ngModel)]="last_name" placeholder="Apellidos" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Autor</button>
+        </form>
+    </div>

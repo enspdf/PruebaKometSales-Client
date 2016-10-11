@@ -1,0 +1,18 @@
+<div class="container" *ngIf="author">
+    <h1>Editar Autor</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <div class="form-group">
+                <input type="text" name="first_name" [(ngModel)]="author.first_name" class="form-control" placeholder="Nombres">
+            </div>
+            <div class="form-group">
+                <input type="text" name="initials" [(ngModel)]="author.initials" class="form-control" placeholder="Iniciales">
+            </div>
+            <div class="form-group">
+                <input type="text" name="last_name" [(ngModel)]="author.last_name" class="form-control" placeholder="Apellidos">
+            </div>
+            <input type="hidden" name="id" [(ngModel)]="author.id">
+            <button type="submit" class="btn btn-primary">Editar Autor</button>
+        </div>
+    </form>
+</div>

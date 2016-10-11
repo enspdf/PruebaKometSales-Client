@@ -1,0 +1,12 @@
+<div class="container" *ngIf="editorial">
+    <h1>Editar Editorial</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <div class="form-group">
+                <input type="text" name="editorial_name" [(ngModel)]="editorial.editorial_name" class="form-control" placeholder="Nombre de la editorial">
+            </div>
+            <input type="hidden" name="id" [(ngModel)]="editorial.id">
+            <button type="submit" class="btn btn-primary">Editar Autor</button>
+        </div>
+    </form>
+</div>

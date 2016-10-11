@@ -1,0 +1,25 @@
+<div *ngIf="authors">
+    <hr>
+    <a routerLink="/author/new" class="btn btn-primary">Nuevo Autor</a>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id Autor</th>
+                <th>Nombre</th>
+                <th>Iniciales</th>
+                <th>Apellido</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let author of authors">
+            <tr>
+                <th>{{ author.id }}</th>
+                <th>{{ author.first_name }}</th>
+                <th>{{ author.initials }}</th>
+                <th>{{ author.last_name }}</th>                
+                <th><a routerLink="/author/delete/{{ author.id }}" class="btn btn-danger">Eliminar</a></th>
+            </tr>
+        </tbody>
+    </table>
+</div>

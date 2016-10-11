@@ -1,0 +1,9 @@
+    <div class="container">
+        <h1>Nuevo Autor</h1>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input type="text" name="editorial_name" [(ngModel)]="editorial_name" placeholder="Nombre de la editorial" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Editorial</button>
+        </form>
+    </div>

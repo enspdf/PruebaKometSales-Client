@@ -1,0 +1,35 @@
+<div *ngIf="books">
+    <hr>
+    <a routerLink="/book/new" class="btn btn-primary">Nuevo Libro</a>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Id Libro</th>
+                <th>Autor</th>
+                <th>Nombre libro</th>
+                <th>Publicación</th>
+                <th>Precio</th>
+                <th>Editorial</th>
+                <th>Paginas</th>
+                <th>Descripción</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let book of books">
+            <tr>
+                <th>{{ book.id }}</th>
+                <th>{{ book.author.first_name }} {{ book.author.last_name }}</th>              
+                <th>{{ book.book_name }}</th>
+                <th>{{ book.publication_date }}</th>
+                <th>${{ book.price }}</th>
+                <th>{{ book.editorial.editorial_name }}</th>
+                <th>{{ book.page_count }}</th>
+                <th>{{ book.book_description }}</th>
+                <th><a routerLink="/book/edit/{{ book.id }}" class="btn btn-info">Actualizar</a></th>
+                <th><a routerLink="/book/delete/{{ book.id }}" class="btn btn-danger">Eliminar</a></th>
+            </tr>
+        </tbody>
+    </table>
+</div>
