@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthorService } from '../../services/Author.service';
-import { Bahia } from '../../Interfaces/Bahia.interface';
 
 @Component({
     moduleId: module.id,
